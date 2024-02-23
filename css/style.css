@@ -1,120 +1,168 @@
 :root {
-    --text-color: hsl(158, 36%, 37%);
-    --bg-body-color: hsl(30, 38%, 92%);
-    --dark-color: hsl(212, 21%, 14%);
-    --grayish-color: hsl(228, 12%, 48%);
-    --font-title: "Fraunces", sans-serif;
-  }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    line-height: 1em;
+  --text-color: hsl(158, 36%, 37%);
+  --bg-body-color: hsl(30, 38%, 92%);
+  --dark-color: hsl(212, 21%, 14%);
+  --grayish-color: hsl(228, 12%, 48%);
+  --font-title: "Fraunces", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1em;
 }
 
-body{
-    height: 100vh;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    color: var(--grayish-color);
-    background-color: var(--bg-body-color);
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
+body {
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: var(--grayish-color);
+  background-color: var(--bg-body-color);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
 }
 
-main{
-    border-radius: 15px;
-    display: flex;
-    width: 600px;
-    height: auto;
+main {
+  border-radius: 15px 15px;
+  display: flex;
+  align-items: center;
+  align-items: center;
+  width: 600px;
+  height: auto;
+  overflow: hidden;
 }
-section{
-    width: 100%;
-    height: auto;
-}
-
-section img{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px 0 0 15px;
+section {
+  width: 100%;
+  height: auto;
 }
 
-.main-right{
-    background-color: white;
-    padding: 30px 30px;
-    
+.mobile{
+    display: none;
 }
 
-.main-right h3{
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    padding-bottom: 20px;
+.main-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.main-right h1{
-    font-family: var(--font-title);
-    color: var(--dark-color);
-    padding-bottom: 20px;
-    font-size: 35px;
+.main-right {
+  background-color: white;
+  padding: 30px 30px;
 }
 
-.main-right p{
-    line-height: 1.5em;
-    padding-bottom: 20px;
+.main-right h3 {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  padding-bottom: 20px;
 }
 
-.prices{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    gap: 15px;
+.main-right h1 {
+  font-family: var(--font-title);
+  color: var(--dark-color);
+  padding-bottom: 20px;
+  font-size: 35px;
 }
 
-.prices .total{
-    font-family: var(--font-title);
-    font-weight: 700;
-    font-size: 30px;
-    color: var(--text-color);
+.main-right p {
+  line-height: 1.5em;
+  padding-bottom: 20px;
 }
 
-.prices .offer{
-    text-decoration: line-through;
+.prices {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
 }
 
-.button{
-    width: 100%;
-    background-color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
+.prices .total {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--text-color);
 }
 
-.button a{
-    display: flex;
+.prices .offer {
+  text-decoration: line-through;
+}
+
+.button {
+  width: 100%;
+  height: auto;
+  background-color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+a {
+  /* display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    align-content: center;
-    gap: 15px;
-    color: white;
+    align-content: center; */
+  text-decoration: none;
+  font-weight: 600;
+  gap: 15px;
+  color: white;
+  width: 100%;
+  height: 100%;
 }
 
-
-
-footer{
-    position: absolute;
-    bottom: 0px;
-    font-weight: 500;
-    padding: 15px 15px;
+footer {
+  position: absolute;
+  bottom: 0px;
+  font-weight: 500;
+  padding: 15px 15px;
 }
-.attribution { text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%);
-text-decoration: none; }
+.attribution {
+  text-align: center;
+}
+.attribution a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 375px) {
+    
+    main{
+        flex-direction: column;
+        width: 90vw;
+        height: 100%;
+        border-radius: 15px;
+        font-size: 12px;
+        margin: 30px 0;
+    }
+
+    .main-left{
+        height: 40%;
+    }
+
+    .main-right h3 {
+        font-size: 13px;
+      }
+
+      .main-right h1 {
+        font-size: 25px;
+      }
+
+      .prices .total {
+        font-size: 20px;
+      }
+
+      .desktop{
+        display: none;
+      }
+      .mobile{
+        display: block;
+      }
+
+}
